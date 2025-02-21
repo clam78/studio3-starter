@@ -1,0 +1,25 @@
+
+body {
+    font-family: "Georgia", serif;
+    margin: 1em;
+    background-color: rgb(186, 214, 245)
+}
+
+li {
+    margin: 0.5em;
+    list-style: none;
+}
+
+input[type="text"] {
+    width: 30em;
+    color: rgb(0, 0, 0);
+}
+
+input:checked {
+    border: none;
+}
+
+.finished {
+    font-style: italic;
+    color:rgb(80, 39, 113)
+}

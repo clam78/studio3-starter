@@ -11,6 +11,7 @@ let app = createApp({
 		]
 	},
 
+
 	methods: {
 		addItem() {
 			this.tasks.push({});
@@ -45,8 +46,16 @@ let app = createApp({
 				this.tasks.at(-1).active = true;
 			}
 		},
+
+		keyPress(event) {
+			if (event.key === "Enter") {
+				this.addItem();
+			}
+		}
 	}
 }, "#app");
+
+
 
 // For debugging
 globalThis.app = app;

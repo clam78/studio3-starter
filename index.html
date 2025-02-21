@@ -5,6 +5,9 @@
 <meta charset="UTF-8">
 <title>Yet Another To-Do List</title>
 <script src="index.js" type="module"></script>
+
+<link href="my_css.css" rel="stylesheet"/>
+
 </head>
 <body>
 	<div id="app">
@@ -13,12 +16,13 @@
 		<ul>
 			<li v-for="(task, i) in tasks">
 				<input type="checkbox" v-model="task.done" aria-label="Done?">
-				<input type="text" aria-label="Task" v-model="task.title">
+				<input type="text" aria-label="Task" v-model="task.title":class="{'finished':task.done}">
 				<button @click="deleteItem(i)">x</button>
 			</li>
 		</ul>
 		<button @click="addItem()">Add item</button>
 		<button @click="clearCompleted()">Clear completed</button>
+		
 	</div>
 </body>
 </html>
